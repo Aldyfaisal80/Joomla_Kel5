@@ -1,0 +1,7 @@
+// Module Menu Default
+@import "../../../../../../../libraries/jollyany/framework/scss/jollyany/modules/mod_menu";
+.bottom-menu-listing {
+  .uk-list > :nth-child(n+2) {
+    margin-top: 5px;
+  }
+}

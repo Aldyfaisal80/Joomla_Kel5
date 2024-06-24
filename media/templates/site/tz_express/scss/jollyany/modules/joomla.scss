@@ -1,0 +1,126 @@
+// Joomla Default
+@import "../../../../../../../libraries/jollyany/framework/scss/jollyany/modules/joomla";
+.moduletable {
+  &:hover {
+    .module-heading-title.uk-heading-line {
+      > :before, > :after {
+        border-color: $colorMain;
+      }
+    }
+  }
+}
+.module-heading-title.uk-heading-line {
+  > :before, > :after {
+    border-width: 3px;
+    border-color: $border-color;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.sidebar {
+  .module-title {
+    position: relative;
+    border-bottom: 1px solid var(--bs-border-color);
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 70px;
+      height: 1px;
+      background-color: $colorMain;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .moduletable {
+    border-bottom: none;
+    padding: 0;
+    margin: 3rem 0;
+    &:hover {
+      .module-title {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .menu-module.nav.uk-list li a {
+    padding: 0;
+  }
+}
+.rtl {
+  .sidebar {
+    .module-title {
+      &:after {
+        left: calc(100% - 70px);
+      }
+    }
+  }
+}
+.blog {
+  .article-post-type {
+    margin: 0 !important;
+  }
+  > div:not(:first-child) {
+    article{
+      &.article-image-left, &.article-image-right {
+        padding-top: 30px;
+        @media (min-width: 1200px) {
+          padding-top: 40px;
+        }
+        border-top: 1px solid var(--bs-border-color);
+      }
+    }
+  }
+}
+.article-meta-info {
+  margin-bottom: 10px;
+  > dd {
+    display: inline-block;
+    margin: 0;
+    &:not(:first-child):not(.article-post-type) {
+      &:before {
+        content: '-';
+        padding: 0 6px;
+      }
+    }
+    &.uk-margin-small-top {
+      margin-top: 5px !important;
+    }
+  }
+}
+.item-page {
+  .article-meta-info {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .pagenavigation {
+    margin-top: 40px;
+  }
+}
+
+.author-wrap {
+  background-color: rgba(0,0,0, 0.04);
+  border-color: $border-color;
+  margin-top: 50px;
+  .author-header {
+    border: none;
+    margin-bottom: 0;
+  }
+  .author-name {
+    margin-bottom: 10px;
+  }
+  .author-description {
+    font-size: 0.875rem;
+  }
+}
+.astroid-socialshare {
+  margin-top: 50px;
+  padding: 30px 0 25px;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+.result__title-url, .result__taxonomy {
+  color: #999;
+}

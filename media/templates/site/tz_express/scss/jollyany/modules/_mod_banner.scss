@@ -1,0 +1,21 @@
+.banner-header {
+  background-color: white;
+  border-bottom: none !important;
+  display: inline-block;
+  padding: 15px !important;
+  margin: 0 15px;
+  &:after {
+    display: none;
+  }
+  & + * {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -70px;
+    border: 3px solid #ddd;
+    padding: 50px 10px;
+  }
+}
+.mod-banners__item.banneritem {
+  margin: 1px;
+}

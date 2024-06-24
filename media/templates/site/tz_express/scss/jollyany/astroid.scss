@@ -1,0 +1,186 @@
+// Astroid Default
+@import "../../../../../../libraries/jollyany/framework/scss/jollyany/astroid";
+.reverse-spinner {
+  border-top-color: var(--heading-border-color) !important;
+  border-left-color: var(--heading-border-color) !important;
+}
+.astroid-stacked-center-balance-header {
+  .astroid-header-center-balance-menu {
+    border-top: 5px solid var(--heading-border-color);
+    padding: 0 !important;
+    .astroid-nav-wraper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+.center-balance-header, .horizontal-header, .divided-header {
+  border-top: 2px solid var(--bs-border-color);
+}
+.astroid-header-center-balance {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  @media (min-width: 576px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media (min-width: 992px) {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
+}
+.astroid-header-section header.astroid-stacked-divided-header:not(.astroid-header-sticky) {
+  .header-stacked-section {
+    div.d-flex:first-child {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  .as-megamenu-section {
+    border-top: 4px solid var(--heading-border-color);
+  }
+}
+.astroid-stacked-divided-menu {
+  padding-top: 0 !important;
+}
+.astroid-header-center-balance-menu, .astroid-stacked-divided-menu {
+  .astroid-nav {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    > li {
+      flex: 1 0 0;
+      display: block;
+      > a {
+        padding: 0 1.2rem;
+        .nav-title {
+          border-bottom: 1px solid var(--bs-border-color);
+          padding: 20px 0;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: $colorMain;
+            transition: all 0.6s ease-in-out;
+          }
+        }
+        &.active {
+          .nav-title {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+        &:hover {
+          text-decoration: none;
+          .nav-title {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.rtl {
+  .astroid-stacked-divided-menu {
+    .astroid-nav {
+      > li > a {
+        border-left: none;
+        border-right: 1px solid $border-color;
+      }
+    }
+  }
+  .astroid-header-center-balance-menu {
+    .astroid-nav {
+      > li + li {
+        > a {
+          border-left: none;
+          border-right: 1px solid $border-color;
+        }
+      }
+    }
+  }
+}
+.astroid-header-sticky {
+  border-bottom: 1px solid $border-color;
+  .astroid-logo-text > a.site-title {
+    font-size: 2rem;
+  }
+}
+.header-block-item {
+  .mod-banners {
+    margin: 0 20px;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .astroid-layout.astroid-layout-boxed .astroid-wrapper {
+    border-left: 8px solid var(--bs-border-color);
+    border-right: 8px solid var(--bs-border-color);
+  }
+}
+.astroid-header-section {
+  header.astroid-stacked-divided-logo-left-header{
+    &:not(.astroid-header-sticky) {
+      .divided-menu-block {
+        .header-block-items {
+          background-color: var(--bs-border-color);
+        }
+      }
+    }
+    .divided-logo-left {
+      padding: 20px;
+    }
+    @media (min-width: 992px) {
+      .col-divided-logo {
+        border-top: 2px solid var(--bs-border-color);
+        > div {
+          border-right: 2px solid var(--bs-border-color);
+        }
+      }
+      .divided-logo-left {
+        border-bottom: 2px solid var(--bs-border-color);
+        padding: 0;
+      }
+    }
+    .divided-menu-block > .d-flex {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .astroid-nav > li {
+      &:first-child {
+        > a {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        > a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  header.astroid-horizontal-header:not(.astroid-header-sticky) {
+    padding: 30px 0;
+    border-bottom: 4px solid;
+  }
+  header.astroid-stacked-seperated-header:not(.astroid-header-sticky) {
+    border-bottom: 4px solid;
+  }
+}
+
+.top-bar {
+  .border-bottom {
+    --bs-border-width: 1px;
+  }
+}
